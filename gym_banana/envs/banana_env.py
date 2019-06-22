@@ -51,7 +51,7 @@ class BananaEnv(gym.Env):
         self.curr_step = -1
         self.is_banana_sold = False
 
-        # Define what the agent can do
+        # Define what the agent can do 
         # Sell at 0.00 EUR, 0.10 Euro, ..., 2.00 Euro
         self.action_space = spaces.Discrete(21)
 
@@ -60,7 +60,10 @@ class BananaEnv(gym.Env):
                         ])
         high = np.array([self.TOTAL_TIME_STEPS,  # remaining_tries
                          ])
+        # As opposed to spaces.Discrete spaces.Box is not discrete but
+        # integral n-dimensional space (not a discrete array!)
         self.observation_space = spaces.Box(low, high, dtype=np.float32)
+        print(self.observation_space.n)
 
         # Store what the agent tried
         self.curr_episode = -1
