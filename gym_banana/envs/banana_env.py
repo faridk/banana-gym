@@ -66,8 +66,8 @@ class BananaEnv(gym.Env):
         # integral n-dimensional space (not a discrete array!)
         self.observation_space = spaces.Box(low, high, dtype=np.float32)
         # Print observation space's high and low
-        logging.info("Observation space's low: %s\n" % self.action_space.low)
-        logging.info("Observation space's high: %s\n" % self.action_space.high)
+        logging.info("Observation space's low: %s\n" % self.observation_space.low)
+        logging.info("Observation space's high: %s\n" % self.observation_space.high)
 
         # Store what the agent tried
         self.curr_episode = -1
