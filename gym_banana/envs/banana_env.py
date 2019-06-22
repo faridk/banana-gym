@@ -63,7 +63,7 @@ class BananaEnv(gym.Env):
         # As opposed to spaces.Discrete spaces.Box is not discrete but
         # integral n-dimensional space (not a discrete array!)
         self.observation_space = spaces.Box(low, high, dtype=np.float32)
-        print(self.observation_space.n)
+        logging.info(self.observation_space.n)
 
         # Store what the agent tried
         self.curr_episode = -1
