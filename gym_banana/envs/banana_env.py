@@ -41,7 +41,7 @@ class BananaEnv(gym.Env):
     """
 
     def __init__(self):
-        self.__version__ = "0.1.0"
+        self.__version__ = "0.2.0"
         logging.info("BananaEnv - Version {}".format(self.__version__))
 
         # General variables defining the environment
